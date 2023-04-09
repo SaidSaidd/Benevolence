@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homelessness Awareness</title>
+  <link rel="stylesheet" href="homelessCSS.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+<body>
+    <header>
+        <a class="logo" href="homepage.html">
+          <img src="images/logo.png" alt="Logo" class="logo">
+        </a>
+        <h1>Homelessness Awareness</h1>
+      </header>
+
+  <div class="container">
+    <main>
+      <h2>The Issue of Homelessness</h2>
+      <p>
+        Homelessness is a complex issue affecting millions of people around the world. A lack of affordable housing, mental health issues, and unemployment are just a few factors that contribute to this growing crisis.
+      </p>
+      <p>
+        It's essential to raise awareness about the severity of homelessness and work together to develop solutions that address the root causes of the problem.
+      </p>
+
+      <h2>Why It's Important to Help</h2>
+      <p>
+        Helping the homeless is not only a humanitarian act but also benefits society as a whole. By providing support and resources to those in need, we can help break the cycle of homelessness and create a more inclusive, compassionate community.
+      </p>
+      <p>
+        Everyone deserves a safe and stable place to call home, and together, we can make a difference in the lives of those who are struggling.
+      </p>
+    </main>
+  </div>
+  <div class="helpInfo">
+    <h3>How You Can Help</h3>
+    <ul>
+      <li>Donate to local organizations that support the homeless.</li>
+      <li>Volunteer your time at shelters or food banks.</li>
+      <li>Advocate for affordable housing and support services in your community.</li>
+      <li>Spread awareness about the issue and encourage others to get involved.</li>
+    </ul>
+  </div>
+  <h2 class="map-heading">Homelessness in Major Cities</h2>
+  <div id="map"></div>
+  <script>
+    var map = L.map('map').setView([37.8, -96], 3.5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    // markers for cities with the highest rate of homelessness
+    const cities = [
+        { name: 'New York City', lat: 40.7128, lng: -74.0060, population: 92000, url: 'https://www.coalitionforthehomeless.org/' },
+        { name: 'Los Angeles', lat: 34.0522, lng: -118.2437, population: 66000, url: 'https://www.lafh.org/' },
+        { name: 'San Francisco', lat: 37.7749, lng: -122.4194, population: 9000, url: 'https://www.stanthonysf.org/' },
+        { name: 'Seattle', lat: 47.6062, lng: -122.3321, population: 12000, url: 'https://www.homelessinfo.org/' },
+        { name: 'San Diego', lat: 32.7157, lng: -117.1611, population: 8000, url: 'https://www.alphaproject.org/' },
+        { name: 'Washington D.C.', lat: 38.907192, lng: -77.036871, population: 5000,url: 'https://www.thriveindc.org' }
+    ];
+
+    cities.forEach(city => {
+        L.marker([city.lat, city.lng]).addTo(map).bindPopup(`<b>${city.name}</b><br>Homeless Population: ${city.population}<br><a href="${city.url}" target="_blank">Help the Homeless</a>`);
+    });
+</script>
+
+
+</body>
+</html>

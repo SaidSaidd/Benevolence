@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgb(230, 174, 243), rgb(230, 174, 243));
+  }
+  .map-heading {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    font-size: 33px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  #map {
+    position: absolute;
+    bottom: 1%;
+    left: 25%;
+    width: 50%;
+    height: 40%;
+    z-index: 10000;
+  }
+
+  header {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  header h1 {
+    margin: 0;
+    display: inline;
+  }
+
+  .logo {
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  .container {
+    width: 80%;
+    margin:0%;
+    overflow: hidden;
+  }
+
+  main {
+    float: left;
+    width: 70%;
+    padding: 0 2rem;
+  }
+
+  main h2 {
+    color: #333;
+  }
+
+  main p {
+    font-size: 1.1rem;
+  }
+
+  aside h3 {
+    color: #ffffff;
+  }
+
+  aside ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  aside ul li {
+    margin-bottom: 1rem;
+  }
+  .helpInfo {  
+    position: absolute;
+    left: 65%;
+    top: 13%;
+    width: 30%;
+    padding: 0 2rem;
+    background-color: rgb(195, 56, 220);
+    color: #ffffff;
+    font-size: 25px;
+  }

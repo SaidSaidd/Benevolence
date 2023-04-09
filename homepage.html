@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benevolence</title>
+    <link rel="stylesheet" href="countdownCSS.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="homepage.html">
+                <img src="images/logo.png" class="logo" width="120" height="120">
+            </a>
+        <div class="nav-logo">
+            <span>Benevolence</span>
+        </div>
+            <ul>
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">Get Involved</a></li>
+                <li><a href="#section3">Progress/Stories</a></li>
+                <li><a href="#section4">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="parallax">
+            <section class="parallax-section" id="section1">
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                      <img src="images/slide1.jpg" alt="Image 1">
+                    </div>
+                    <div class="slide fade">
+                      <img src="images/slide2.jpg" alt="Image 2">
+                    </div>
+                    <div class="slide fade">
+                      <img src="images/slide3.jpg" alt="Image 3">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/slide4.jpg" alt="Image 3">
+                      </div>
+                    <div class="slide fade">
+                      <img src="images/slide5.jpg" alt="Image 3">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/slide6.jpg" alt="Image 3">
+                      </div>
+                  </div>
+                <div id="countdown" class="countdown"></div>
+                <div class="content">
+                    <div class="textbox">
+                        <h2>Empowering Change, One Act at a Time</h2>
+                    </div>
+                </div>
+                <button class="get-notified-btn" onclick="openPopup()">Get Notified</button>
+
+                <div class="popup" id="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="closePopup()">&times;</span>
+                        <h2>Get Notified</h2>
+                        <form>
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="fullname" required>
+                            <br>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <br>
+
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone">
+                            <br>
+
+                            <label for="notifyOnce">
+                            <input type="checkbox" id="notifyOnce" name="notification" value="once">
+                                Notify Once
+                            </label>
+
+                            <label for="notifyWeekly">
+                            <input type="checkbox" id="notifyWeekly" name="notification" value="weekly">
+                                Notify Weekly
+                            </label>
+                            <br>
+
+                            <input type="submit" value="Submit">
+                            
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+            <section class="parallax-section" id="section2">
+                <div class="get-involved-container">
+                    <h2>Get Involved</h2>
+                    <div class="get-involved-boxes">
+                        <div class="get-involved-box">
+                            <h3>Help the Homeless</h3>
+                            <img src="images/homeless.png" alt="Volunteer" class="get-involved-img">
+                            <p>Join our team of dedicated volunteers and help make a difference in our community.</p>
+                            <a href="homelessHTML.html" class="get-involved-btn">Learn More</a>
+                        </div>
+                        <div class="get-involved-box">
+                            <h3>Help the Environment</h3>
+                            <img src="images/cleaning.png" alt="Partner" class="get-involved-img">
+                            <p>Join us in nurturing our planet - together, we can create a greener, brighter future!</p>
+                            <a href="environmentHTML.html" class="get-involved-btn">Learn More</a>
+                        </div>
+                        <div class="get-involved-box">
+                            <h3>Donate</h3>
+                            <img src="images/donation.png" alt="Donate" class="get-involved-img">
+                            <p>Every donation counts! Contribute today to make a lasting impact in someone's life. Let's make a difference together!</p>
+                            <a href="donateHTML.html" class="get-involved-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="parallax-section" id="section3">
+                <div class="tracker-container">
+                    <h2 class="tracker-container">#BeBenevolent Tracker</h2>
+                    <div class="tracker">
+                      <div class="tracker-progress"></div>
+                    </div>
+                    <p class="tracker-info">198 posts using #BeBenevolent</p>
+                  </div>
+
+                  <section class="stories-section">
+                    <h2>Anonymous Benevolent Stories</h2>
+                    <div class="stories-container">
+                        <!-- Add stories dynamically or manually -->
+                        <div class="story">
+                            <p>"Today, I helped an elderly neighbor carry groceries to her house. It felt great to see her smile and know that I made her day a bit easier."</p>
+                        </div>
+                        <div class="story">
+                            <p>"I volunteered at a local food bank and helped distribute meals to those in need. It was heartwarming to see the gratitude in their eyes."</p>
+                        </div>
+                        <div class="story">
+                            <p>"I saw a shivering homeless man outside the grocery store, so I bought him a warm meal and a blanket. His eyes welled up with gratitude, and it reminded me of how small acts of kindness can make a world of difference."</p>
+                        </div>
+                        <div class="story">
+                            <p>"Last weekend, my friends and I joined a local park cleanup event. It was truly fulfilling to see our combined efforts transform the park into a cleaner, greener space for everyone to enjoy."</p>
+                        </div>
+                        <div class="story">
+                            <p>"This holiday season, I decided to donate non-perishable food items to a nearby food bank. The staff were so appreciative, and it felt amazing knowing my small contribution would help feed families in need."</p>
+                        </div>
+                        <div class="story">
+                            <p>"I recently donated toys and art supplies to a children's hospital in my city. It warmed my heart to know that these small gifts could bring joy and comfort to the young patients as they battled their illnesses. I've learned that even a simple act of generosity can make a huge difference in someone's life."</p>
+                        </div>
+                        
+                    </div>
+                </section>
+
+            </section>
+                <section class="parallax-section" id="section4">
+                    <section class="aboutUs-section">
+                        <h2>About Us</h2>
+                        <div class="aboutUs-container">
+                            <div class="aboutUs-story">
+                                <p>Our journey began when our founder, Said Khamidjanov, noticed the pressing social issues that existed within his own community. From homelessness to environmental degradation, he felt a strong desire to make a difference. With this passion, Said established Benevolence – a platform designed to inspire and empower individuals to partake in social good initiatives and foster positive change.</p>
+                        
+                                <p>At Benevolence, we believe that every person has the power to create a lasting impact in their community and the world at large. By participating in our initiatives, you are contributing to a collective effort that can truly transform lives. Our mission is to provide resources, guidance, and opportunities for individuals to engage in acts of kindness and compassion.</p>
+                        
+                                <p>Together, we can create a better tomorrow for our communities and the planet. As we continue to grow, our ultimate goal is to cultivate a global network of individuals committed to social good. We invite you to join us on this exciting journey and help make the world a kinder, more compassionate place.</p>
+                            </div>    
+                        </div>
+                    </section>
+                
+                    <section class="participate-section">
+                        <h2>Get Involved and Change the World</h2>
+                        <div class="participate-container">
+                            <div class="participate-story">
+                                <p>By participating in our social good initiatives, you are not only helping those in need but also contributing to a larger movement of change. Your actions, no matter how small, can inspire others to do the same and create a ripple effect of positive impact. Here are some ways you can get involved and make a difference:</p>
+                                <ul>
+                                    <li>Volunteer your time and skills to help those in need.</li>
+                                    <li>Donate to causes that resonate with your values.</li>
+                                    <li>Participate in community clean-ups to improve the environment.</li>
+                                    <li>Share our mission and initiatives with friends and family, encouraging them to join the cause.</li>
+                                </ul>
+                                <p>Remember, every act of kindness counts. Together, we can create a brighter future for our communities and the world.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            </div>
+        </main>
+    <script src="countdownJS.js"></script>
+</body>
+</html>
